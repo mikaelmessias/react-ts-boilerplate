@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"node_modules/": true,
+			"public": false,
+			".git*": true,
+			"yarn.lock": true,
+			"package.json": false,
+			"src/react-app-env.d.ts": true,
+			"*.code-workspace": true
+		}
+	}
+}
