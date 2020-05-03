@@ -39,6 +39,8 @@ module.exports = {
     '@typescript-eslint/semi': ['error'],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
+    "@typescript-eslint/semi": ["error"],
+    "semi": "off",
     'import/extensions': [
       'error',
       'ignorePackages',
