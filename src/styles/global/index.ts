@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { normalize, reset } from './clear';
+import * as theme from 'styles/theme';
+import { normalize, reset } from './reset';
 
 const GlobalStyle = createGlobalStyle`
   ${normalize};
@@ -19,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     display: table-cell;
     -webkit-font-smoothing: antialiased !important;
+    color: ${theme.text.gray};
   }
 
   body, #root {
@@ -27,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   * {
-    font-family: 'Arial', 'Tahoma', 'sans-serif';
+    font-family: Arial, Helvetica, sans-serif;
   }
 `;
 
