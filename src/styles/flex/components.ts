@@ -1,20 +1,20 @@
 import styled from 'styled-components';
-import Flex from '.';
+import FlexType from '.';
 
 export const Container = styled.div`
-  ${Flex.Container}
+  ${FlexType.Container}
 `;
 
 export const Row = styled.div`
-  ${Flex.Hybrid}
+  ${FlexType.Hybrid}
 `;
 
 export const Column = styled.div`
-  ${Flex.Hybrid}
+  ${FlexType.Hybrid}
 
   flex-direction: column;
 `;
 
 export const Item = styled.div`
-  ${Flex.Item}
+  ${FlexType.Item}
 `;
