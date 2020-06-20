@@ -3,17 +3,18 @@ module.exports = {
     browser: true,
     es6: true,
   },
+  parser: '@typescript-eslint/parser',
   extends: [
     'airbnb',
-    'react-app',
+    'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
   ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -23,34 +24,64 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint',
     'import',
-    'jsx-a11y'
+    'jsx-a11y',
+    '@typescript-eslint',
+    'prettier',
+    'eslint-plugin-import-helpers'
   ],
   rules: {
-    'import/prefer-default-export': 'off',
-    'react/prop-types': 'off',
-    'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-filename-extension': [
-      'error', {
-        extensions: ['.tsx']
-      }
+    'react/jsx-filename-extension': [2, {
+      'extensions': ['.jsx', '.tsx']
+    }],
+    'react/jsx-props-no-spreading': [
+      'error',
+      {
+        html: 'ignore',
+        custom: 'ignore',
+        exceptions: [''],
+      },
     ],
-    '@typescript-eslint/semi': ['error'],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-member-accessibility': 'off',
-    "@typescript-eslint/semi": ["error"],
-    "semi": "off",
+    'react/prop-types': [2, { ignore: ['children'] }],
     'import/extensions': [
       'error',
       'ignorePackages',
       {
+        js: 'never',
+        jsx: 'never',
         ts: 'never',
         tsx: 'never',
       },
     ],
+    'import/prefer-default-export': 'off',
+    'import-helpers/order-imports': [
+      'warn',
+      {
+        newlinesBetween: 'never',
+        groups: [
+          '/^react/',
+          'module',
+          '/^(models|routes|store)/',
+          '/^types/',
+          '/^(assets|components|view)/',
+          '/^(shared|styles)/',
+          ['parent', 'sibling', 'index'],
+        ],
+        alphabetize: {
+          order: 'asc', ignoreCase: true
+        },
+      },
+    ],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-member-accessibility': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/semi': ['error'],
+    semi: 'off',
   },
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },

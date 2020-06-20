@@ -1,5 +1,12 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import ReactDOM from 'react-dom';
-import Root from './components/Root';
+import GlobalStyle from 'styles';
+// import Root from './components/Root';
+
+const Root: FunctionComponent = () => (
+  <React.StrictMode>
+    <GlobalStyle />
+  </React.StrictMode>
+);
 
 ReactDOM.render(<Root />, document.getElementById('root'));

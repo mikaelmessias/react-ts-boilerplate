@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-const Router = () => (
+const Router: FunctionComponent = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/" exact />
