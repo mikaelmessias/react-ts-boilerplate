@@ -1,11 +1,12 @@
 import React, { FunctionComponent } from 'react';
 import ReactDOM from 'react-dom';
+import Router from 'router';
 import GlobalStyle from 'styles';
-// import Root from './components/Root';
 
 const Root: FunctionComponent = () => (
   <React.StrictMode>
     <GlobalStyle />
+    <Router />
   </React.StrictMode>
 );
 
