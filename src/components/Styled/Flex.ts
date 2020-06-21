@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import FlexType from '.';
+import FlexType from 'styles/flex';
 
 export const Container = styled.div`
-  ${FlexType.Container}
+  ${FlexType.Container};
 `;
 
 export const Row = styled.div`

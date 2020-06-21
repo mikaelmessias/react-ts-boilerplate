@@ -1,9 +1,9 @@
 import { css } from 'styled-components';
 import {
-  FlexItemProps, FlexContainerProps, FlexHybridProps, FlexType,
-} from 'types/Flex';
+  ItemProps, ContainerProps, HybridProps, FlexType,
+} from './props';
 
-const Container = css<FlexContainerProps>((props) => `
+const Container = css<ContainerProps>((props) => `
   display: flex;
   flex-direction: ${props.direction || 'row'};
   flex-wrap: ${props.wrap || 'nowrap'};
@@ -14,7 +14,7 @@ const Container = css<FlexContainerProps>((props) => `
   height: ${props.height || 'auto'};
 `);
 
-const Item = css<FlexItemProps>((props) => `
+const Item = css<ItemProps>((props) => `
   flex: ${props.flex || '0 1 auto'};
   flex-grow: ${props.grow || '0'};
   flex-shrink: ${props.shrink || '1'};
@@ -23,7 +23,7 @@ const Item = css<FlexItemProps>((props) => `
   align-self: ${props.alignSelf || 'auto'};
 `);
 
-const Hybrid = css<FlexHybridProps>`
+const Hybrid = css<HybridProps>`
   ${Container}
   ${Item}
 `;

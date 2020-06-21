@@ -1,9 +1,9 @@
 import { Link as RouterLink } from 'react-router-dom';
 import styled from 'styled-components';
+import * as Breakpoint from 'styles/breakpoints';
 import FlexType from 'styles/flex';
 import { border } from 'styles/sizes';
 import { padding, margin } from 'styles/spaces';
-import * as Breakpoint from 'styles/template/breakpoints';
 import * as theme from 'styles/theme';
 import keyframes from './keyframes';
 

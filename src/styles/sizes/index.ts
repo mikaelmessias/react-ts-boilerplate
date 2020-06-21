@@ -1,4 +1,4 @@
-import FontType from 'types/Font';
+import FontType from 'styles/sizes/props';
 
 export const border = {
   outer: '1px',
