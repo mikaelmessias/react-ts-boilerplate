@@ -1,53 +1,35 @@
-import styled, { css } from 'styled-components';
-import { font } from 'styles/sizes';
-import { MarginProps } from 'styles/spaces/props';
+import styled from 'styled-components';
+import { font, WeightBase, WeightProps } from 'styles/sizes';
+import { MarginBase, MarginProps } from 'styles/spaces';
 
-export const MarginBase = css((props: MarginProps) => `
-  &.margin-bottom {
-    margin-bottom: ${props.marginSize};
-  }
-`);
+type HeadingProps = MarginProps & WeightProps;
 
-export const WeightBase = css`
-  &.bold {
-    font-weight: ${font.weight.bold};
-  }
-
-  &.regular {
-    font-weight: ${font.weight.regular};
-  }
-
-  &.light {
-    font-weight: ${font.weight.light};
-  }
+const H1 = styled.h1<HeadingProps>`
+  font-weight: ${font.weight.bold};
+  font-size: ${font.size.h1};
+  ${MarginBase};
+  ${WeightBase};
 `;
 
-const H1 = styled.h1`
-${MarginBase};
-${WeightBase};
-font-weight: ${font.weight.bold};
-font-size: ${font.size.h1};
+const H2 = styled.h2<HeadingProps>`
+  font-weight: ${font.weight.bold};
+  font-size: ${font.size.h2};
+  ${MarginBase};
+  ${WeightBase};
 `;
 
-const H2 = styled.h2`
-${MarginBase};
-${WeightBase};
-font-weight: ${font.weight.bold};
-font-size: ${font.size.h2};
+const H3 = styled.h3<HeadingProps>`
+  font-weight: ${font.weight.light};
+  font-size: ${font.size.h3};
+  ${MarginBase};
+  ${WeightBase};
 `;
 
-const H3 = styled.h3`
-${MarginBase};
-${WeightBase};
-font-weight: ${font.weight.light};
-font-size: ${font.size.h3};
-`;
-
-const H4 = styled.h4`
-${MarginBase};
-${WeightBase};
-font-weight: ${font.weight.light};
-font-size: ${font.size.h4};
+const H4 = styled.h4<HeadingProps>`
+  font-weight: ${font.weight.light};
+  font-size: ${font.size.h4};
+  ${MarginBase};
+  ${WeightBase};
 `;
 
 export const Heading = {
@@ -55,18 +37,18 @@ export const Heading = {
 };
 
 const Big = styled.p`
-${WeightBase};
-font-size: ${font.size.p.big};
+  font-size: ${font.size.p.big};
+  ${WeightBase};
 `;
 
 const Medium = styled.p`
-${WeightBase};
-font-size: ${font.size.p.medium};
+  font-size: ${font.size.p.medium};
+  ${WeightBase};
 `;
 
 const Small = styled.p`
-${WeightBase};
-font-size: ${font.size.p.small};
+  font-size: ${font.size.p.small};
+  ${WeightBase};
 `;
 
 export const Paragraph = {

@@ -1,13 +1,8 @@
 import styled, { css } from 'styled-components';
 import FlexType from 'styles/flex';
 import { HybridProps } from 'styles/flex/props';
+import { MarginBase } from 'styles/spaces';
 import { MarginProps } from 'styles/spaces/props';
-
-const MarginBase = css((props: MarginProps) => `
-  &.margin-top {
-    margin-top: ${props.marginSize};
-  }
-`);
 
 type HybridBoxProps = HybridProps & MarginProps;
 

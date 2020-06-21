@@ -1,4 +1,5 @@
-import FontType from 'styles/sizes/props';
+import { css } from 'styled-components';
+import FontType, { WeightProps } from './props';
 
 export const border = {
   outer: '1px',
@@ -34,3 +35,11 @@ export const font: FontType = {
   },
   weight,
 };
+
+export const WeightBase = css((props: WeightProps) => `
+  font-weight: ${props.bold && font.weight.bold};
+  font-weight: ${props.regular && font.weight.regular};
+  font-weight: ${props.light && font.weight.light};
+`);
+
+export * from './props';

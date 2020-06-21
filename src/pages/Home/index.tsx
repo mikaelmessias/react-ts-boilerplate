@@ -31,13 +31,12 @@ const Home: FunctionComponent = () => {
 
         <Box.Section
           direction="column"
-          className="margin-top"
-          marginSize="24px"
+          marginTop="24px"
         >
           <Heading.H4
             as="h3"
-            className="margin-bottom bold"
-            marginSize="8px"
+            marginBottom="8px"
+            bold
           >
             Section 1 - Text Big
           </Heading.H4>
@@ -51,13 +50,12 @@ const Home: FunctionComponent = () => {
 
         <Box.Section
           direction="column"
-          className="margin-top"
-          marginSize="24px"
+          marginTop="24px"
         >
           <Heading.H4
             as="h3"
-            className="margin-bottom bold"
-            marginSize="8px"
+            marginBottom="8px"
+            bold
           >
             Section 2 - Text Medium
           </Heading.H4>
@@ -71,13 +69,12 @@ const Home: FunctionComponent = () => {
 
         <Box.Section
           direction="column"
-          className="margin-top"
-          marginSize="24px"
+          marginTop="24px"
         >
           <Heading.H4
             as="h3"
-            className="margin-bottom bold"
-            marginSize="8px"
+            marginBottom="8px"
+            bold
           >
             Section 3 - Text Small
           </Heading.H4>
@@ -90,8 +87,7 @@ const Home: FunctionComponent = () => {
         </Box.Section>
 
         <Box.Section
-          className="margin-top"
-          marginSize="40px"
+          marginTop="40px"
         >
           <Heading.H2>
             Galeria
