@@ -38,7 +38,13 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Title](url) - Brief tool description
+- [React](https://reactjs.org)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Redux](https://redux.js.org/)
+- [styled-components](https://styled-components.com/)
+- [Yup](https://github.com/jquense/yup)
+- [Unform](https://unform.dev/)
 
 ## Contributing
 
@@ -52,11 +58,11 @@ See also the list of [contributors](https://github.com/mikaelmessias/project/con
 
 ## License
 
-This project is licensed under the **XXX** License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the **GNU v3.0** License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
+- Hat tip to anyone whose code was used
+- Inspiration
 
 - [Billie Thompson](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
